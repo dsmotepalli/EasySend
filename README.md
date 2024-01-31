@@ -1,4 +1,4 @@
-## Built a basic version of PayTM Frontend and Backend
+## Built a basic version of money transfer Frontend and Backend
 
 ### Signup Page
 
