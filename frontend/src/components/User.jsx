@@ -21,6 +21,7 @@ function User({ user }) {
   const [amount, setAmount] = useState(0);
   const setBalance = useSetRecoilState(balanceAtom);
   const { toast } = useToast();
+
   async function sendMoney() {
     const { data } = await axios.post(
       "http://localhost:3000/app/v1/account/transfer",
@@ -43,6 +44,7 @@ function User({ user }) {
       description: `${data.message}`,
     });
   }
+  
   return (
     <div className="w-full border-2 border-white border-opacity-40 rounded-md  mt-2">
       <div className="flex items-center justify-between p-2">

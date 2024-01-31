@@ -6,13 +6,15 @@ const mongoose = require("mongoose");
 const cors = require("cors");
 app.use(cors());
 app.use(express.json());
+require("dotenv").config();
 
-mongoose.connect(
-  "mongodb+srv://deepaksurya642:rgvzoomin@cluster0.qwtcohk.mongodb.net/",
-  {
-    dbName: 'Paytm',
-  }
-);
+const connectDB = async () => {
+  const conn = await mongoose.connect(process.env.MONGO_URI, {
+    dbName: "Paytm",
+  });
+  console.log("connected to ", conn.connection.host);
+};
+connectDB();
 
 app.use("/app/v1", mainRouter);
 app.listen(3000, () => console.log("app running of 3000"));

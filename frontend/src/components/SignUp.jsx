@@ -31,14 +31,14 @@ function SignUp() {
   };
   return (
     <div className="h-screen w-full flex justify-center items-center ">
-      <div className="w-[250px] h-[360px] border-2 border-blue-50 rounded-md p-2 bg-white text-black">
+      <div className="w-[400px] h-[420px] text-3xl border-2 border-blue-50 rounded-md p-2 bg-white text-black">
         <h1 className="text-center font-bold">Sign Up</h1>
         <p className="text-xs opacity-60 text-center ">
           Enter Your information to Create an account
         </p>
         <form onSubmit={(e) => FormSubmit(e)}>
           <div>
-            <label htmlFor="firstname" className="text-xs">
+            <label htmlFor="firstname" className="text-lg">
               First Name
             </label>
             <Input
@@ -46,38 +46,38 @@ function SignUp() {
               required={"required"}
               value={firstName}
               id="firstname"
-              className="w-full h-8  text-xs"
+              className="w-full h-8  text-lg"
               onChange={(e) => setFirstName(e.target.value)}
             ></Input>
           </div>
           <div>
-            <label htmlFor="lastanem" className="text-xs">
+            <label htmlFor="lastanem" className="text-lg">
               Last Name
             </label>
             <Input
               type=""
               required={"required"}
               id="lastanem"
-              className="w-full h-8 text-xs"
+              className="w-full h-8 text-lg"
               value={lastName}
               onChange={(e) => setLastName(e.target.value)}
             ></Input>
           </div>
           <div>
-            <label htmlFor="email" className="text-xs">
+            <label htmlFor="email" className="text-lg">
               Email
             </label>
             <Input
               type="email"
               value={email}
               id="email"
-              className="w-full h-8  text-xs"
+              className="w-full h-8  text-lg"
               required={"required"}
               onChange={(e) => setEmail(e.target.value)}
             ></Input>
           </div>
           <div>
-            <label htmlFor="password" className="text-xs">
+            <label htmlFor="password" className="text-lg">
               Password
             </label>
             <Input
@@ -85,7 +85,7 @@ function SignUp() {
               required={"required"}
               value={password}
               id="password"
-              className="w-full h-8 text-xs"
+              className="w-full h-8 text-lg"
               onChange={(e) => setPassword(e.target.value)}
             ></Input>
           </div>
@@ -93,7 +93,7 @@ function SignUp() {
             <Button size="sm">Signup</Button>
           </div>
         </form>
-        <p className="text-xs text-center">
+        <p className="text-lg text-center">
           {" "}
           Already have an account?{" "}
           <a href="" className="underline" onClick={() => navigate("/signin")}>

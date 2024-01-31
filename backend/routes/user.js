@@ -26,6 +26,7 @@ router.get("/currentuser", authMiddleware, async (req, res) => {
   const user = await User.findById(req.userId).select("-password");
   return res.status(200).json(user);
 });
+
 router.post("/signup", async (req, res) => {
   const { success } = signupBody.safeParse(req.body);
   console.log(success);
